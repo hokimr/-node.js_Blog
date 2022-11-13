@@ -1,0 +1,14 @@
+<%- include('./partials/header'); -%>
+
+<h1>Home</h1>
+<p> <%= hometext %> </p>
+
+<% post_arry.forEach(function(user){ %>
+    <h2> <%= user.title %> </h2>
+    <p class="ellipsis"> <%= user.body %>
+        <a href="posts/<%= user._id %>" >Read More</a>
+    </p>
+    
+<% }); %>
+
+<%- include('./partials/footer'); -%>
